@@ -11,9 +11,10 @@
   --color-foreground: #f3f4f6;
   /* ตัวหนังสือสีขาวนวล */
 
-  --color-primary: #3b82f6;
-  /* สีน้ำเงินของปุ่ม (ปุ่ม Github / Buy me a coffee) */
-  --color-primary-hover: #2563eb;
+  --color-primary: #0C61E8;
+  /* สีน้ำเงินของปุ่ม  */
+  --color-primary-hover: #0C49A8;
+  /* สีน้ำเงินเข้มขึ้นสำหรับปุ่มเมื่อโฮเวอร์ */
   --color-secondary: #9ca3af;
   /* สีข้อความรอง (สีเทา) */
 }

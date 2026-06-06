@@ -29,14 +29,12 @@ export default function Nav() {
                 <Link className="cursor-pointer hover:text-primary transition-colors duration-500" href="/">Home</Link>
                 <Link className="cursor-pointer hover:text-primary transition-colors duration-500" href="/blog">Blog</Link>
                 <Link className="cursor-pointer hover:text-primary transition-colors duration-500" href="/about">About</Link>
-                <a className="flex items-center gap-1 bg-primary p-2 rounded-lg text-white cursor-pointer hover:bg-primary-hover transition-all duration-500 hover:-translate-y-1" href="https://github.com/CallMeSova" target="_blank">
-                    <div className="font-bold">GitHub</div>
-                    <svg width="16px" height="16px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a className="flex items-center gap-1 pl-4 pr-3 py-2 bg-primary rounded-lg cursor-pointer hover:bg-primary-hover transition-all duration-500 hover:-translate-y-1" href="https://github.com/CallMeSova" target="_blank">
+                    <div className="font-medium">GitHub</div>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M14 2H5.50003L4.00003 3.5L6.83581 6.33579L0.585815 12.5858L3.41424 15.4142L9.66424 9.16421L12.5 12L14 10.5L14 2Z" fill="#ffffff"></path>
-                        </g>
+                        <g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g>
                     </svg>
                 </a>
             </div>
