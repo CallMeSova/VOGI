@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "VOGI | Blog",
+  title: "VOGI | Home",
   description: "A personal blog about programming and technology.",
 };
 
