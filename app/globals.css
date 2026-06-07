@@ -55,3 +55,9 @@ h1 {
   font-family: var(--font-serif);
   color: var(--color-primary);
 }
+
+h2 {
+  font-size: 24px;
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+}

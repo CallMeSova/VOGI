@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react"; // ⚡ ดึง useEffect เข้ามาจัดการเรื่องเวลาแยกต่างหาก
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import Card from "@/components/card";
@@ -20,7 +20,7 @@ export default function Home() {
     <div>
       <div className="mb-16 grid grid-cols-2 gap-10 items-center">
         <div>
-          <h1 className="text-4xl font-serif font-bold mb-6">
+          <h1>
             <Typewriter
               options={{
                 strings: "<span class='text-foreground'>Hi, I'm</span> Vigo.",
