@@ -11,7 +11,7 @@
   --color-foreground: #f3f4f6;
   /* ตัวหนังสือสีขาวนวล */
 
-  --color-primary: #0C61E8;
+  --color-primary: #2E7AF0;
   /* สีน้ำเงินของปุ่ม  */
   --color-primary-hover: #0C49A8;
   /* สีน้ำเงินเข้มขึ้นสำหรับปุ่มเมื่อโฮเวอร์ */
@@ -27,4 +27,25 @@
   background-size: 15px 15px;
   mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 100%);
   -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 100%);
+}
+
+/* เพิ่มอนิเมชันสำหรับโหลดหน้าเว็บ */
+@keyframes pageLoadEntrance {
+  0% {
+    filter: blur(20px);
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* สร้าง Class สำเร็จรูปเพื่อให้เรียกใช้งานได้ง่ายใน Tailwind */
+.animate-page-entrance {
+  animation: pageLoadEntrance 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: filter, opacity, transform;
 }
