@@ -46,6 +46,12 @@
 
 /* สร้าง Class สำเร็จรูปเพื่อให้เรียกใช้งานได้ง่ายใน Tailwind */
 .animate-page-entrance {
-  animation: pageLoadEntrance 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: pageLoadEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: filter, opacity, transform;
+}
+
+h1 {
+  font-size: 36px;
+  font-family: var(--font-serif);
+  color: var(--color-primary);
 }

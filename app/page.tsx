@@ -1,15 +1,20 @@
 "use client";
 
-import { useState } from "react"; // ⚡ ดึง useState มาสร้างตัวเช็กไทม์ไลน์
+import { useState, useEffect } from "react"; // ⚡ ดึง useEffect เข้ามาจัดการเรื่องเวลาแยกต่างหาก
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import Card from "@/components/card";
 
 export default function Home() {
-  // สเต็ปที่ 1: คุมการโผล่ของพารากราฟ <p>
-  const [showParagraph, setShowParagraph] = useState(false);
-  // สเต็ปที่ 2: คุมการโผล่ของปุ่ม Explore
   const [showExplore, setShowExplore] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowExplore(true);
+    }, 200);
+
+    return () => clearTimeout(timer); // เคลียร์เซ็ตไทม์เอาต์ป้องกันหน่วยความจำรั่วไหล
+  }, []);
 
   return (
     <div>
@@ -18,38 +23,23 @@ export default function Home() {
           <h1 className="text-4xl font-serif font-bold mb-6">
             <Typewriter
               options={{
-                strings: "Hi, I'm <span class='text-primary'>Vigo</span>.",
+                strings: "<span class='text-foreground'>Hi, I'm</span> Vigo.",
                 autoStart: true,
                 loop: false,
                 delay: 50,
               }}
-              onInit={(typewriter) => {
-                typewriter
-                  .callFunction(() => {
-                    // 1. พอ H1 พิมพ์อักษรตัวสุดท้ายเสร็จปุ๊บ สั่งเปิดสวิตช์พารากราฟทันที
-                    setShowParagraph(true);
-                  })
-                  .pauseFor(100) // 2. หน่วงเวลาแช่ไว้ 0.6 วินาที รอให้พารากราฟเฟดตัวเองขึ้นมาจนเต็มตา
-                  .callFunction(() => {
-                    // 3. หลังจากนั้นค่อยเปิดสวิตช์ให้ปุ่ม Explore โหลดตามมาปิดท้าย
-                    setShowExplore(true);
-                  })
-                  .start();
-              }}
             />
           </h1>
 
-          <p className={`text-secondary leading-relaxed transition-all duration-1000 transform ${showParagraph
-            ? "opacity-100 translate-y-0 blur-none"
-            : "opacity-0 translate-y-4 blur-sm"
-            }`}>
+          {/* พารากราฟแสดงผลทันทีพร้อมหน้าเว็บ */}
+          <p className="text-secondary leading-relaxed animate-page-entrance">
             3rd-year Computer Science student passionate about Full-Stack Web Application development and solving Cybersecurity challenges. I enjoy writing clean code, collaborating effectively with others, and am always open to learning new technologies.
           </p>
         </div>
 
         <div className="flex justify-center">
           <Image
-            src="/Mona_Lisa.jpg"
+            src="/images/Mona_Lisa.jpg"
             loading="eager"
             alt="profile image"
             width={300}
@@ -61,8 +51,9 @@ export default function Home() {
 
       <div id="explore-section" className="scroll-mt-24"></div>
 
+      {/* แผง Explore และการ์ด จะสไลด์เฟดขึ้นมาหลังผ่านไป 0.2 วิ */}
       <div className={`transition-all duration-1000 transform 
-        ${showExplore ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
+        ${showExplore ? "opacity-100 translate-y-0 blur-none" : "opacity-0 translate-y-4 blur-sm"}
       `}>
         <a
           href="#explore-section"
@@ -81,21 +72,22 @@ export default function Home() {
 
         <div className="mb-16 grid grid-cols-3 gap-10">
           <Card
-            img="/blog-cover.jpg"
+            img="/images/blog-cover.png"
+            alt="blog cover image"
             title="Blog"
             description="Sharing my thoughts and experiences on programming, technology, and more."
             href="/blog"
           />
-
           <Card
-            img="/projects-cover.jpg"
+            img="/images/projects-cover.png"
+            alt="projects cover image"
             title="Projects"
             description="Showcasing my work in web development, cybersecurity, and other tech projects."
             href="/projects"
           />
-
           <Card
-            img="/contact-cover.jpg"
+            img="/images/contact-cover.png"
+            alt="contact cover image"
             title="Contact"
             description="Get in touch with me for collaborations, questions, or just to say hi!"
             href="/about"

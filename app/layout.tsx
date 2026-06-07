@@ -21,7 +21,7 @@ const sansFont = Inter({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`scroll-smooth ${serifFont.variable} ${sansFont.variable}`}>
+    <html lang="en" className={`scroll-smooth data-scroll-behavior="smooth ${serifFont.variable} ${sansFont.variable}`}>
       <body className="bg-background text-foreground font-sans min-h-screen flex flex-col relative antialiased">
 
         {/* ลายตารางพื้นหลัง */}
