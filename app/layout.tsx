@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/nav";
 import { Metadata } from "next";
 import Footer from "@/components/footer";
+import ScrollToTop from "@/components/scroll-to-top";
 
 export const metadata: Metadata = {
   title: "VOGI | Home",
@@ -23,6 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`scroll-smooth data-scroll-behavior="smooth ${serifFont.variable} ${sansFont.variable}`}>
       <body className="bg-background text-foreground font-sans min-h-screen flex flex-col relative antialiased">
+
+        <ScrollToTop />
 
         {/* ลายตารางพื้นหลัง */}
         <div className="absolute inset-0 z-0 bg-grid-pattern pointer-events-none" />
