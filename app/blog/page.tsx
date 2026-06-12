@@ -99,7 +99,7 @@ export default function Blog() {
                 <h2 className="mb-4">All Posts (Page {currentPage}/{totalPages})</h2>
 
                 {/* ⚡ 3. วนลูปแสดงผลบล็อกเฉพาะของหน้านั้นๆ */}
-                <div className="grid grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {currentPosts.map((post) => (
                         <Card
                             key={post.id}

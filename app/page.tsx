@@ -18,8 +18,8 @@ export default function Home() {
 
   return (
     <div>
-      <div className="mb-16 grid grid-cols-2 gap-10 items-center">
-        <div>
+      <div className="mb-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+        <div className="order-2 md:order-1">
           <h1>
             <Typewriter
               options={{
@@ -31,20 +31,19 @@ export default function Home() {
             />
           </h1>
 
-          {/* พารากราฟแสดงผลทันทีพร้อมหน้าเว็บ */}
           <p className="text-secondary leading-relaxed animate-page-entrance">
             3rd-year Computer Science student passionate about Full-Stack Web Application development and solving Cybersecurity challenges. I enjoy writing clean code, collaborating effectively with others, and am always open to learning new technologies.
           </p>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center order-1 md:order-2">
           <Image
             src="/images/Mona_Lisa.jpg"
             loading="eager"
             alt="profile image"
             width={300}
             height={400}
-            className="rounded-2xl object-cover transition-transform duration-500 hover:scale-102"
+            className="rounded-2xl object-cover transition-transform duration-500 hover:scale-102 w-48 h-64 sm:w-60 sm:h-80 md:w-[300px] md:h-[400px]"
           />
         </div>
       </div>
@@ -57,7 +56,7 @@ export default function Home() {
       `}>
         <a
           href="#explore-section"
-          className="w-1/4 mx-auto mb-8 flex items-center justify-center text-primary cursor-pointer transition-all duration-1000 transform"
+          className="w-1/2 sm:w-1/3 md:w-1/4 mx-auto mb-8 flex items-center justify-center text-primary cursor-pointer transition-all duration-1000 transform"
         >
           <h1 className="text-4xl font-serif font-bold mb-2">
             Explore
@@ -70,7 +69,7 @@ export default function Home() {
           </svg>
         </a>
 
-        <div className="mb-16 grid grid-cols-3 gap-10">
+        <div className="mb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           <Card
             img="/images/blog-cover.png"
             alt="blog cover image"

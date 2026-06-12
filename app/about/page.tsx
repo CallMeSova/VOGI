@@ -101,7 +101,7 @@ export default function About() {
                     <p className="text-secondary mb-8">
                         I'm always open to new opportunities, collaborations, or just a friendly chat about tech!
                     </p>
-                    <div className="flex justify-center gap-8">
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
                         {/* Facebook */}
                         <a href="#" className="group flex flex-col items-center gap-2 hover:text-primary transition-all duration-300">
                             <div className="p-4 rounded-xl bg-secondary/10 group-hover:bg-primary/20 group-hover:-translate-y-1 transition-all duration-300">

@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="w-full max-w-4xl mx-auto px-10 py-8 flex items-center justify-between text-xs text-secondary relative z-10">
+        <footer className="w-full max-w-4xl mx-auto px-4 sm:px-10 py-6 sm:py-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-0 justify-between text-xs text-secondary relative z-10">
             <span className="font-medium text-white/70">&copy; {new Date().getFullYear()} VOGI</span>
             <div className="flex items-center gap-5 text-secondary">
 

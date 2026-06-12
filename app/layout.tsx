@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Nav />
 
-        <main className="flex-1 w-full max-w-4xl mx-auto mt-8 px-8 py-16 relative z-10">
+        <main className="flex-1 w-full max-w-4xl mx-auto mt-8 px-4 sm:px-8 py-12 sm:py-16 relative z-10">
           {children}
         </main>
 
