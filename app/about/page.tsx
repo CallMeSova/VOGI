@@ -103,7 +103,7 @@ export default function About() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
                         {/* Facebook */}
-                        <a href="#" className="group flex flex-col items-center gap-2 hover:text-primary transition-all duration-300">
+                        <a href="https://www.facebook.com/vigo.thiraphat/" target="_blank" className="group flex flex-col items-center gap-2 hover:text-primary transition-all duration-300">
                             <div className="p-4 rounded-xl bg-secondary/10 group-hover:bg-primary/20 group-hover:-translate-y-1 transition-all duration-300">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
